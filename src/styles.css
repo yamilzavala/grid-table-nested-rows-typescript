@@ -576,10 +576,10 @@ main {
     width: 82rem;
   }
   .three-columns-header {
-    grid-template-columns: 30.5rem 20rem 30.5rem;
+    grid-template-columns: 29rem 20rem 29rem;
   }
   .three-columns-row{
-    grid-template-columns: 30.5rem 20rem 30.5rem;
+    grid-template-columns: 29rem 20rem 29rem;
   }
 }
 
