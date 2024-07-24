@@ -21,7 +21,6 @@ export default function Cell({
         {level < 4 && position === 0 && (
           <CollapseButton
             handleShowChildren={handleShowChildren}
-            expanded={expanded}
             id={id}
             idContainer={idContainer}
           />

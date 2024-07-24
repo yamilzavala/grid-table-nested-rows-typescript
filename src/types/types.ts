@@ -45,7 +45,7 @@ export type CollapseButtonProps = {
     handleShowChildren: ((idContainer: string | null) => void) | undefined;
     id: string;
     idContainer: string | null;
-    expanded: boolean;
+    // expanded: boolean;
 }
 
 export type CollapseAllButtonProps = {
