@@ -22,22 +22,22 @@ export type CellProps = {
 }
 
 export type RowListProps = {
-    rows: RowProps | null;
+    // rows: RowProps | null;
+    // columns: string[];
     goToTop: boolean;
     allCollapse: boolean;
-    columns: string[];
     showLastColumn: boolean;
 }
 
 export type TableProps = {
     // rows: DataLevelsNestedType[] | null;
-    rows: RowProps | null;
-    columns: string[];
+    //rows: RowProps | null;
+    //columns: string[];
     showLastColumn: boolean
 }
 
 export type HeaderProps = {
-    columns:string[];
+    // columns:string[];
     showLastColumn: boolean;
 }
 

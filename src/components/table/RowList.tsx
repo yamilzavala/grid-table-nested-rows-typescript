@@ -1,10 +1,13 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import Header from './Header';
 import Row from './Row';
 import { RowListProps } from '../../types/types';
+import { RootState } from '../../store/store';
+import { useSelector } from 'react-redux';
 
 
-const RowList = ({rows, goToTop, allCollapse, columns, showLastColumn}: RowListProps) => {
+const RowList = ({goToTop, allCollapse, showLastColumn}: RowListProps) => {
+    const rows = useSelector((state: RootState) => state.rows.data);
 
     const handleTop = () => {
         const top_elment = document.getElementById('topel');
@@ -20,7 +23,7 @@ const RowList = ({rows, goToTop, allCollapse, columns, showLastColumn}: RowListP
     return (
         <div className="rows-container scroll-container">
             <div id='topel'></div>
-            <Header columns={columns} showLastColumn={showLastColumn}/>
+            <Header showLastColumn={showLastColumn}/>
             {/* rows */}
             {rows && (
                 <Row 

@@ -3,8 +3,6 @@ import { getRowClassContainer, rotateArrows, toggleAllContainersChildren, toggle
 import Cell from "./Cell";
 import { useState, useEffect } from "react";
 
-
-
 export default function Row({
   wbsElement,
   level,
@@ -50,12 +48,10 @@ export default function Row({
       updateLevel4Cells();
   }, [showLastColumn]);
 
-
-
   return (
     <>
       {/* row */}
-      <div id={id} className={getRowClassContainer(level, showLastColumn)}>  
+      <div id={id} className={getRowClassContainer(level, showLastColumn)} >  
           {/* cell 1 */}
           <Cell
             value={wbsElement}

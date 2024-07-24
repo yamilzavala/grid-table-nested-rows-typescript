@@ -1,5 +1,4 @@
 import {
-  //MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import { CollapseButtonProps } from "../../types/types";
@@ -21,13 +20,10 @@ export default function CollapseButton({ handleShowChildren = () => {}, expanded
     <>
       {/* {expanded ? ( */}
       {isExpanded ? (
-        // <button id={id} disabled={id === '0'} onClick={(e) => {e.preventDefault();handleShowChildren(idContainer)}} className="btn-arrow ">
-        <button id={id} disabled={id === '0'} onClick={(e) => {e.preventDefault(); toggle(); handleShowChildren(idContainer)}} className="btn-arrow ">
-          {/* <MdOutlineKeyboardArrowUp /> */}
+        <button id={id} disabled={id === '0'} onClick={(e) => {e.preventDefault(); toggle(); handleShowChildren(idContainer)}} className="btn-arrow ">        
           <MdOutlineKeyboardArrowUp />
         </button>
       ) : (
-        // <button id={id} disabled={id === '0'} onClick={(e) => {e.preventDefault();handleShowChildren(idContainer)}} className="btn-arrow btn-arrow-rotated">
         <button id={id} disabled={id === '0'} onClick={(e) => {e.preventDefault(); toggle(); handleShowChildren(idContainer)}} className="btn-arrow btn-arrow-rotated">
           <MdOutlineKeyboardArrowUp /> 
         </button>

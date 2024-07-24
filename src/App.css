@@ -196,6 +196,13 @@ main {
   transition: all 1s;
 }
 
+.row-expanded {
+  background: #f5f5f5;
+}
+.row-collapsed {
+  background: #fff;
+}
+
 .four-columns-row {
   grid-template-columns: 21.875rem 15rem 21.875rem 21.875rem;
   grid-template-areas: 

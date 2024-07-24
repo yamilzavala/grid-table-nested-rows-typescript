@@ -1,16 +1,8 @@
 import Table from "./Table";
-import { useState, useEffect } from "react";
-import { dataLevelsNested, columns } from "../../data/data";
-import { RowProps } from "../../types/types";
+import { useState} from "react";
 
-import { useSelector } from 'react-redux';
-import { RootState } from '../../store/store';
 
 export default function ContainerTable() {
-  const data = useSelector((state: RootState) => state.rows.data);
-  console.log('data: ', data)
-
-  //const [rows, setData] = useState<RowProps | null>(null); //this state fetch levels from endpoint
   const [showLastColumn, setShowLastColumn] = useState<boolean>(true)
   
   const toggleLastColumn = () => {
@@ -29,8 +21,7 @@ export default function ContainerTable() {
         {showLastColumn ? 'hide last column' : 'show last column'}
       </button>
 
-      {/* <Table rows={rows} columns={columns} showLastColumn={showLastColumn}/> */}
-      <Table rows={data} columns={columns} showLastColumn={showLastColumn}/>
+      <Table showLastColumn={showLastColumn}/>
     </main>
   );
 }

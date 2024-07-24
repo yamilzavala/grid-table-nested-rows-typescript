@@ -1,15 +1,17 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import {dataLevelsNested} from '../data/data';
+import {dataLevelsNested, columns} from '../data/data';
 import { RowProps } from '../types/types';
 
 interface RowState {
     expandedRows: string[];
     data: typeof dataLevelsNested;
+    headers: typeof columns;
 }
 
 const initialState: RowState = {
     expandedRows: ["0"],
     data: dataLevelsNested,
+    headers: columns,
 };
 
 const getAllRowIds = (data: RowProps): string[] => {

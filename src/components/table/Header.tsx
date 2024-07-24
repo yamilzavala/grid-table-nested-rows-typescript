@@ -1,6 +1,11 @@
 import { HeaderProps } from "../../types/types";
+import { RootState } from '../../store/store';
+import { useSelector } from 'react-redux';
 
-export default function Header({ columns, showLastColumn }: HeaderProps) {
+export default function Header({ showLastColumn }: HeaderProps) {
+  const columns = useSelector((state: RootState) => state.rows.headers);
+
+
   const renderedHeaders = columns.map((col, idx) => {
     let headerClass = "header-cell cell-h";
     switch (idx) {
