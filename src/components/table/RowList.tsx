@@ -5,10 +5,6 @@ import { RowListProps } from '../../types/types';
 
 
 const RowList = ({rows, goToTop, allCollapse, columns, showLastColumn}: RowListProps) => {
-    console.log(rows)
-    // const renderedRows = rows?.children?.map((row,idx) => (
-    //     <Row key={idx} {...row} collapse={allCollapse} showLastColumn={showLastColumn}/>
-    // ));
 
     const handleTop = () => {
         const top_elment = document.getElementById('topel');

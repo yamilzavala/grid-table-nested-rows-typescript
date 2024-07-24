@@ -3,6 +3,8 @@ import { getRowClassContainer, rotateArrows, toggleAllContainersChildren, toggle
 import Cell from "./Cell";
 import { useState, useEffect } from "react";
 
+
+
 export default function Row({
   wbsElement,
   level,
@@ -14,6 +16,7 @@ export default function Row({
   id,
   showLastColumn
 }: RowProps) {
+
   const [expanded, setExpanded] = useState<boolean>(!collapse);
   const [currentContainerChildrenId, setCurrentContainerChildrenId] = useState<string | null>(null);
  
@@ -42,10 +45,10 @@ export default function Row({
       rotateArrows(expanded);
   }, [collapse]);
 
-  // useEffect(() => {           
-  //     updateRootCells(expanded);
-  //     updateLevel4Cells();
-  // }, [showLastColumn]);
+  useEffect(() => {           
+      //updateRootCells(expanded);
+      updateLevel4Cells();
+  }, [showLastColumn]);
 
 
 
