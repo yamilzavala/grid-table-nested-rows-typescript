@@ -9,12 +9,6 @@ export default function ContainerTable() {
     setShowLastColumn(!showLastColumn);
   };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setData(dataLevelsNested);
-  //   }, 1500)
-  // }, []);
-
   return (
     <main>
       <button onClick={toggleLastColumn}>
